@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock</title>
+</head>
+<body>
+	<script>
+		//Pseudo Code
+		// 1. define score and rock paper scissors prompt
+		//	2. Set If statement for if it is a tie (rock) 
+		//	3. Set else if statement for if it is a loss (scissors)
+		//	4. Set else If statement for if it is a win (paper)
+
+		var score = 0;
+		var rps = prompt("Rock, paper, or scissors?");
+		
+		if (rps === "rock"){
+			console.log("Tie!!");
+			console.log(score);
+		} else if (rps === "scissors") {
+			console.log("You lose!!");
+			score = score - 1;
+			console.log(score);
+		} else if ( rps === "paper"){
+			console.log("You win!!");
+			score = score + 1;
+			console.log(score);
+		} else {
+			console.log("Don't be stupid! Try again!")
+			score = score - 1;
+			console.log(score);
+		}
+
+	</script>
+	<button onclick="myScript()">run script</button>
+</body>
+</html>
