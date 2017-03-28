@@ -110,6 +110,10 @@ section.sOurServices{
 	justify-content:center;
 	margin:0 auto;
 	flex-wrap: wrap;
+	@media (max-width:500px){
+		align-items: center;
+		flex-direction: column;
+	}
 	.opButton{
 		float:left;
 		margin:50px 3px 60px 3px;
@@ -139,6 +143,9 @@ section.sOurServices{
 		font-weight: 700;
 		font-size: 1.6;
 		width:10%;
+		display:block;
+		display:flex;
+		justify-content: center;
 	}
 	.opButtonPlus:hover{//DYLAN
 		background: url('../assets/dylan.png'); 
@@ -258,7 +265,7 @@ section.sOurServices{
 			margin-right:0;
 		}
 		@media (max-width: 350px) {
-			min-width:300px;
+			// min-width:00px;
 		}
 	}
 	.whoAboutUs{
@@ -686,6 +693,7 @@ p.otTileTitle{
 	@media (max-width: 420px) {
 		margin: 0;
 		width: 345px;
+		padding:25px;
 	}
 }
 
@@ -1141,6 +1149,8 @@ p.rightArrow{
 	}
 	.circle4{
 		background:url('../assets/circles_41.png');
+	}
+	.circle4:hover{
 		@media (max-width: 520px) {
 			background:url('../assets/kody.png');
 			background-size:140%;

@@ -87,16 +87,42 @@ footer{
 		}
 	}
 	.InstaSq{
-		float:left;
-		height:50px;
-		width:50px;
-		margin:5px;
+		// float:left;
+		// height:50px;
+		// width:50px;
+		// margin:5px;
+		// background-color: silver
+		display: inline-block;
+		position: relative;
+		width: calc(33% - 10px);
+		// max-width: 60px;
+		.dummy{
+			margin-top:100%;
+		}
+		@media(max-width: 500px){
+			// display:flex;
+			// width:calc(33% - 10px);
+			// height: ;
+		}
+		.InstaSq:after {
+			@media(max-width: 500px){
+				// content: "";
+				// display: block;
+				// padding-bottom: 100%;
+			}
+		}
 	}
 }
 
 .Insta{
 	padding-right:0;
 	height:auto;
+	max-width:250px;
+	margin:0 auto;
+	@media (max-width:500px){
+		// display:flex;
+		// align-items: center;
+	}
 	.InstaSq1{
 		background: url('../assets/insta_small5.jpg');
 		background-size:cover;
@@ -123,13 +149,18 @@ footer{
 		background-size:cover;
 	}
 	.InstaSqO{
-		width:100%;
-		height:100%;
+		// width:100%;
+		// height:100%;
 		background: $pBGradientNinety;
 		visibility:hidden;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		button{
 			background:transparent;
 			color:white;
@@ -144,6 +175,24 @@ footer{
 	.InstaSqO button:active{
 		transform: translateY(2px);
 	}
+}
+
+//Andy
+
+.Insta .InstaSq4:hover{
+	background: url('../assets/andy.png');
+	background-size:cover;
+	background-position: left;
+}
+.Insta .InstaSq5:hover{
+	background: url('../assets/andy.png');
+	background-size:150%;
+	background-position: 33%;
+}
+.Insta .InstaSq6:hover{
+	background: url('../assets/andy.png');
+	background-size:200%;
+	background-position: 35%;
 }
 
 .footerCircle{
@@ -171,24 +220,6 @@ footer{
 		position: relative;
 		top:2px;
 	}
-}
-
-//Andy
-
-.Insta .InstaSq4:hover{
-	background: url('../assets/andy.png');
-	background-size:cover;
-	background-position: left;
-}
-.Insta .InstaSq5:hover{
-	background: url('../assets/andy.png');
-	background-size:150%;
-	background-position: 33%;
-}
-.Insta .InstaSq6:hover{
-	background: url('../assets/andy.png');
-	background-size:200%;
-	background-position: 35%;
 }
 
 .adam{

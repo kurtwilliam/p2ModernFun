@@ -139,7 +139,8 @@ html {
 html {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  max-width: 100%; }
 
 body {
   font-size: 1.2rem; }
@@ -438,6 +439,14 @@ section.sOurServices {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  @media (max-width: 500px) {
+    .opButtons {
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .opButtons .opButton {
     float: left;
     margin: 50px 3px 60px 3px;
@@ -464,7 +473,14 @@ section.sOurServices {
     color: black;
     font-weight: 700;
     font-size: 1.6;
-    width: 10%; }
+    width: 10%;
+    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .opButtons .opButtonPlus:hover {
     background: url("../assets/dylan.png");
     background-size: 185%;
@@ -588,9 +604,6 @@ section.sOurServices {
       .who .whoImg {
         padding-right: 0;
         margin-right: 0; } }
-    @media (max-width: 350px) {
-      .who .whoImg {
-        min-width: 300px; } }
   .who .whoAboutUs {
     width: calc(50% - 50px);
     margin-right: 25px;
@@ -1022,7 +1035,8 @@ p.otTileTitle {
   @media (max-width: 420px) {
     .cb1, .cb3 {
       margin: 0;
-      width: 345px; } }
+      width: 345px;
+      padding: 25px; } }
 
 .cb1 {
   left: 10%;
@@ -1465,18 +1479,18 @@ p.rightArrow {
     background: url("../assets/circles_80.png"); }
   .skillsC .circle4 {
     background: url("../assets/circles_41.png"); }
-    @media (max-width: 520px) {
-      .skillsC .circle4 {
-        background: url("../assets/kody.png");
-        background-size: 140%;
-        background-position: 80% 30%;
-        border-radius: 50%;
-        -webkit-transform: scaleX(-1);
-        -ms-transform: scaleX(-1);
-        transform: scaleX(-1); } }
-    @media (max-width: 520px) {
-      .skillsC .circle4 p {
-        color: transparent; } }
+  @media (max-width: 520px) {
+    .skillsC .circle4:hover {
+      background: url("../assets/kody.png");
+      background-size: 140%;
+      background-position: 80% 30%;
+      border-radius: 50%;
+      -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      transform: scaleX(-1); } }
+  @media (max-width: 520px) {
+    .skillsC .circle4:hover p {
+      color: transparent; } }
   .skillsC .pPercentage {
     font-size: 2.6rem;
     font-weight: 700;
@@ -1627,14 +1641,17 @@ footer {
     .fColumn ul li a:active {
       text-shadow: 0 0 5px #a444a1; }
   .fColumn .InstaSq {
-    float: left;
-    height: 50px;
-    width: 50px;
-    margin: 5px; }
+    display: inline-block;
+    position: relative;
+    width: calc(33% - 10px); }
+    .fColumn .InstaSq .dummy {
+      margin-top: 100%; }
 
 .Insta {
   padding-right: 0;
-  height: auto; }
+  height: auto;
+  max-width: 250px;
+  margin: 0 auto; }
   .Insta .InstaSq1 {
     background: url("../assets/insta_small5.jpg");
     background-size: cover; }
@@ -1655,8 +1672,6 @@ footer {
     background: url("../assets/insta_small6.jpg");
     background-size: cover; }
   .Insta .InstaSqO {
-    width: 100%;
-    height: 100%;
     background: linear-gradient(to bottom right, rgba(209, 33, 205, 0.9), rgba(68, 74, 238, 0.9));
     visibility: hidden;
     display: -webkit-flex;
@@ -1667,7 +1682,12 @@ footer {
     justify-content: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
     .Insta .InstaSqO button {
       background: transparent;
       color: white;
@@ -1680,6 +1700,21 @@ footer {
     -webkit-transform: translateY(2px);
     -ms-transform: translateY(2px);
     transform: translateY(2px); }
+
+.Insta .InstaSq4:hover {
+  background: url("../assets/andy.png");
+  background-size: cover;
+  background-position: left; }
+
+.Insta .InstaSq5:hover {
+  background: url("../assets/andy.png");
+  background-size: 150%;
+  background-position: 33%; }
+
+.Insta .InstaSq6:hover {
+  background: url("../assets/andy.png");
+  background-size: 200%;
+  background-position: 35%; }
 
 .footerCircle {
   display: -webkit-flex;
@@ -1713,21 +1748,6 @@ footer {
   .footerCircle .footerCircles:active {
     position: relative;
     top: 2px; }
-
-.Insta .InstaSq4:hover {
-  background: url("../assets/andy.png");
-  background-size: cover;
-  background-position: left; }
-
-.Insta .InstaSq5:hover {
-  background: url("../assets/andy.png");
-  background-size: 150%;
-  background-position: 33%; }
-
-.Insta .InstaSq6:hover {
-  background: url("../assets/andy.png");
-  background-size: 200%;
-  background-position: 35%; }
 
 .adam {
   position: absolute;
